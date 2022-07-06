@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Average Caculator</h1>
+    <form onsubmit="calculate(); return false;">
+        <label for="English">English:</label>
+        <input type="text" min="1" required placeholder="EnterYourTotalMarks" id="English"> <br>
+        <br>
+
+        <label for="Urdu">Urdu:</label>
+        <input type="text" min="1" required placeholder="EnterYourTotalMarks" id="Urdu"> <br>
+        <br>
+
+        <label for="Maths">Maths:</label>
+        <input type="text" min="1" required placeholder="EnterYourTotalMarks" id="Maths"> <br>
+        <br>
+
+        <label for="Science">Science:</label>
+        <input type="text" min="1" required placeholder="EnterYourTotalMarks" id="Science"> <br>
+        <br>
+
+        <label for="Biology">Biology:</label>
+        <input type="text" min="1" required placeholder="EnterYourTotalMarks" id="Biology"> <br>
+        <br>
+
+        <label for="Chemistry">Chemistry:</label>
+        <input type="text" min="1" required placeholder="EnterYourTotalMarks" id="Chemistry"> <br>
+        <br>
+        <label for="Physics">Physics:</label>
+        <input type="text" min="1" required placeholder="EnterYourTotalMarks" id="Physics"> <br>
+        <br>
+        <label for="Sindhi">Sindhi:</label>
+        <input type="text" min="1" required placeholder="EnterYourTotalMarks" id="Sindhi"> <br>
+        <br>
+        <label for="Computer">Computer:</label>
+        <input type="text" min="1" required placeholder="EnterYourTotalMarks" id="Computer"> <br>
+        <br>
+        <label for="Islamiat">Islamiat:</label>
+        <input type="text" min="1" required placeholder="EnterYourTotalMarks" id="Islamiat"> <br>
+        <br>
+        <button type="submit">calculate</button>
+    </form>
+
+
+    <P id="Result"></P>
+    <P id="totalMarks"></P>
+
+
+    <script>
+        function calculate() {
+
+            let English = +document.querySelector("#English").value;
+            let Urdu = +document.querySelector("#Urdu").value;
+            let Maths = +document.querySelector("#Maths").value;
+            let Science = +document.querySelector("#Science").value;
+            let Biology = +document.querySelector("#Biology").value;
+            let Chemistry = +document.querySelector("#Chemistry").value;
+            let Physics = +document.querySelector("#Physics").value;
+            let  Sindhi= +document.querySelector("#Sindhi").value;
+            let  Computer= +document.querySelector("#Computer").value;
+            let  Islamiat= +document.querySelector("#Islamiat").value;
+            let totalMarks = English + Maths + Science + Urdu + Biology + Chemistry + Physics + Sindhi + Computer + Islamiat;
+            let Result = English + Urdu + Maths + Science + Biology + Chemistry + Physics + Sindhi + Computer + Islamiat / 10;
+            document.querySelector("#totalMarks").innerHTML = `Your totalMarks are here <b>${totalMarks}</b>`;
+
+            document.querySelector("#Result").innerHTML = `Your Average Result <b>${Result}</b>`;
+        }
+        console.log(Result);
+        //  alert(Result);
+    </script>
+</body>
+
+</html>
